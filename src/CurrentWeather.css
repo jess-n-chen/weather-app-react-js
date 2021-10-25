@@ -1,0 +1,17 @@
+.date-time-description {
+  text-align: right;
+}
+
+.current-temp-icon {
+  font-size: 4.5rem;
+  text-align: center;
+}
+
+.current-temp {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.current-weather {
+  margin-top: 3rem;
+}

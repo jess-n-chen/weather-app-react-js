@@ -1,0 +1,8 @@
+.footer {
+  margin-top: 2rem;
+}
+footer p,
+footer a {
+  text-align: center;
+  color: #6e88a1 !important;
+}

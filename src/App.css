@@ -1,38 +1,73 @@
-.App {
-  text-align: center;
+h1 {
+  color: #34495e;
+  font-size: 4rem !important;
+  font-weight: bolder !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  color: rgba(34, 49, 63, 0.8);
+  font-size: 1.5rem !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p {
+  color: rgba(34, 49, 63, 0.5);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.fa-cloud-moon {
+  background: -webkit-linear-gradient(
+    rgba(221, 221, 221) 5.5%,
+    rgba(110, 136, 161) 90.2%
+  );
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
 
-.App-link {
-  color: #61dafb;
+.fa-cloud-rain {
+  background: -webkit-linear-gradient(
+    rgba(241, 241, 242) 0.1%,
+    rgba(224, 226, 228) 100.2%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fa-cloud-sun {
+  background: -webkit-linear-gradient(
+    rgba(233, 222, 250) 0%,
+    rgba(251, 252, 219) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fa-map-marker-alt {
+  background-color: #22313f;
+  border: 1px solid #22313f;
+  border-radius: 4px;
+  color: #fff;
+  display: inline-block;
+  padding: 10px 10px;
+  margin: 0px 0px 0px 2px;
+}
+
+.fa-sun {
+  background: -webkit-linear-gradient(
+    rgba(254, 255, 165) 0%,
+    rgba(255, 232, 182) 90%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main-container {
+  border: 2px solid #e4f1fe;
+  border-radius: 25px;
+  background: #ffffff;
+  font-family: "Baloo 2", cursive !important;
+  max-width: 720px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 40px 50px;
 }
