@@ -10,7 +10,7 @@ export default function Footer() {
           Author: Jessica Chen
           <br />
           <a
-            href="https://github.com/jess-n-chen/my-awesome-weather-app"
+            href="https://github.com/jess-n-chen/weather-app-react-js"
             target="_blank"
             rel="noreferrer"
           >
