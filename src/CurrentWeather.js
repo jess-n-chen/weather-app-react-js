@@ -1,37 +1,35 @@
 import React from "react";
+import DateTime from "./DateTime";
+import Icon from "./Icon";
+import DisplayTemp from "./DisplayTemp";
 
 import "./CurrentWeather.css";
 
 export default function CurrentWeather(props) {
   return (
     <div className="row current-weather">
-      <div className="col">
-        <h1 id="current-city">{props.city}</h1>
-        <div className="row">
-          <div className="col">
-            <i className="fas fa-cloud-moon current-temp-icon"></i>
-            <p className="current-temp">{props.temp}°C</p>
-          </div>
-          <div className="col">
-            <p>
-              <strong>Precipitation: </strong>
-              {props.precipitation}%
-            </p>
-            <p>
-              <strong>Humidity: </strong>
-              {props.humidity}%
-            </p>
-            <p>
-              <strong>Wind: </strong>
-              {props.wind} km/h
-            </p>
-          </div>
-        </div>
+      <div className="col-6">
+        <h1 id="current-city">{props.data.city}</h1>
+        <ul>
+          <li>
+            <strong>Last Updated:</strong>
+            <DateTime dateTime={props.data.date} />
+          </li>
+          <li>
+            <strong>Humidity: </strong>
+            {props.data.humidity}%
+          </li>
+          <li>
+            <strong>Wind: </strong>
+            {props.data.wind} km/h
+          </li>
+        </ul>
       </div>
-      <div className="col date-time-description">
-        <h2 id="date-value">{props.date}</h2>
-        <h2 id="time-value">{props.time} ET</h2>
-        <h2>Cloudy</h2>
+      <div className="col-6 pt-4">
+        <div className="icon px-4">
+          <Icon iconCode={props.data.icon} />
+        </div>
+        <DisplayTemp cel={props.data.temperature} />
       </div>
     </div>
   );

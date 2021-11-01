@@ -1,17 +1,19 @@
+ul {
+  list-style-type: none;
+}
 .date-time-description {
   text-align: right;
 }
 
-.current-temp-icon {
-  font-size: 4.5rem;
-  text-align: center;
-}
-
-.current-temp {
-  font-size: 2rem;
-  text-align: center;
-}
-
 .current-weather {
   margin-top: 3rem;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.weatherDescription {
+  text-transform: capitalize;
 }
