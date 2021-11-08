@@ -9,19 +9,28 @@ export default function Icon(props) {
     },
     "01n": {
       desc: "CLEAR_NIGHT",
-      color: "LightSkyBlue ",
+      color: "LightSkyBlue",
     },
-    "02d": "PARTLY_CLOUDY_DAY",
+    "02d": {
+      desc: "PARTLY_CLOUDY_DAY",
+      color: "LemonChiffon",
+    },
     "02n": {
       desc: "PARTLY_CLOUDY_NIGHT",
       color: "AliceBlue",
     },
-    "03d": "PARTLY_CLOUDY_DAY",
+    "03d": {
+      desc: "PARTLY_CLOUDY_DAY",
+      color: "LemonChiffon",
+    },
     "03n": {
       desc: "PARTLY_CLOUDY_NIGHT",
       color: "AliceBlue",
     },
-    "04d": "CLOUDY",
+    "04d": {
+      desc: "CLOUDY",
+      color: "Silver",
+    },
     "04n": {
       desc: "CLOUDY",
       color: "Silver",
@@ -72,8 +81,8 @@ export default function Icon(props) {
     <ReactAnimatedWeather
       icon={iconTable[props.iconCode].desc}
       color={iconTable[props.iconCode].color}
-      size="100"
-      animate="true"
+      size={props.iconSize}
+      animate={true}
     />
   );
 }

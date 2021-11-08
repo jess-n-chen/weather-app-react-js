@@ -5,6 +5,10 @@ ul {
   text-align: right;
 }
 
+.current-temp {
+  font-size: 70px !important;
+}
+
 .current-weather {
   margin-top: 3rem;
 }
@@ -12,6 +16,18 @@ ul {
 .icon {
   display: inline-block;
   vertical-align: middle;
+}
+
+.temp-display {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.temp-metric {
+  color: #8dc6ff;
+  font-size: 20px;
+  text-decoration: none;
+  vertical-align: top;
 }
 
 .weatherDescription {

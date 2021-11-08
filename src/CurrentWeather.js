@@ -1,7 +1,6 @@
 import React from "react";
 import DateTime from "./DateTime";
 import Icon from "./Icon";
-import DisplayTemp from "./DisplayTemp";
 
 import "./CurrentWeather.css";
 
@@ -27,9 +26,16 @@ export default function CurrentWeather(props) {
       </div>
       <div className="col-6 pt-4">
         <div className="icon px-4">
-          <Icon iconCode={props.data.icon} />
+          <Icon iconCode={props.data.icon} iconSize={100} />
         </div>
-        <DisplayTemp cel={props.data.temperature} />
+        <div className="temp-display">
+          <h2>
+            <span className="current-temp">
+              {Math.round(props.data.temperature)}
+            </span>
+            <span className="temp-metric">°C</span>
+          </h2>
+        </div>
       </div>
     </div>
   );

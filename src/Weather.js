@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
+import CurrentWeather from "./CurrentWeather";
+import FutureWeather from "./FutureWeather";
 
 import "./Weather.css";
-import CurrentWeather from "./CurrentWeather";
 
 export default function Weather(props) {
-  let [weatherInfo, setWeatherInfo] = useState({ ready: false });
-  let [city, setCity] = useState(props.placeholderCity);
+  const [weatherInfo, setWeatherInfo] = useState({ ready: false });
+  const [city, setCity] = useState(props.placeholderCity);
 
   function setWeather(response) {
     setWeatherInfo({
@@ -33,20 +34,9 @@ export default function Weather(props) {
 
   function weatherSearch(event) {
     const weatherApiKey = "8a7d387ef910673e2322fa2db8174c73";
-    let weatherRoot = "https://api.openweathermap.org/data/2.5/weather";
-    let weatherUnits = "metric";
+    let weatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${weatherApiKey}&units=metric`;
 
-    axios
-      .get(
-        weatherRoot +
-          "?q=" +
-          city +
-          "&appid=" +
-          weatherApiKey +
-          "&&units=" +
-          weatherUnits
-      )
-      .then(setWeather);
+    axios.get(weatherApiUrl).then(setWeather);
   }
 
   let weatherForm = (
@@ -72,6 +62,7 @@ export default function Weather(props) {
         <div className="container">
           {weatherForm}
           <CurrentWeather data={weatherInfo} />
+          <FutureWeather data={weatherInfo.coordinates} />
         </div>
       </div>
     );
